@@ -34,12 +34,12 @@ class BinaryTree {
 	public Node insertRec(Node node, int data) {
 
 		if (root == null) {
-			root = new Node(data);
+			return root = new Node(data);
 		} else if (data < root.data) {
 
-			root.left = insertRec(root.left, data);
+			return root.left = insertRec(root.left, data);
 		} else if (data > root.data) {
-			root.right = insertRec(root.right, data);
+			return root.right = insertRec(root.right, data);
 		}
 
 		return root;

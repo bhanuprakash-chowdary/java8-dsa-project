@@ -38,32 +38,32 @@ class Test{
 	}
 }
 
-//
-//
-//class Thread1 extends Thread{
-//	
-//	
-//	
-//	Test t1;
-//	public Thread1(Test t) {
-//		t1=t;
-//	}
-//	
-//	@Override
-//	public void run() {
-//		t1.testMethod(5);
-//	}
-//}
-//
-//class Thread2 extends Thread{
-//	
-//	Test t1;
-//	public Thread2(Test t) {
-//		t1=t;
-//	}
-//	
-//	@Override
-//	public void run() {
-//		t1.testMethod(100);
-//	}
-//}
+
+
+class Thread1 extends Thread{
+	
+	
+	
+	Test t1;
+	public Thread1(Test t) {
+		t1=t;
+	}
+	
+	@Override
+	public void run() {
+		t1.testMethod(5);
+	}
+}
+
+class Thread2 extends Thread{
+	
+	Test t1;
+	public Thread2(Test t) {
+		t1=t;
+	}
+	
+	@Override
+	public void run() {
+		t1.testMethod(100);
+	}
+}

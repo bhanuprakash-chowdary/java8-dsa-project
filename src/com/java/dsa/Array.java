@@ -6,9 +6,9 @@ public class Array {
 
 		int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
-		int target = 10;
+		int target = 1;
 
-		int index1 = linearSearch(arr, target);
+//		int index1 = linearSearch(arr, target);
 		int index = binarySearch(arr, target,0,arr.length-1);
 		if (index != -1) {
 			System.out.println("Element found at index of :" + index);
@@ -32,6 +32,7 @@ public class Array {
 
 	public static int binarySearch(int[] arr, int target,int left,int right) {
 
+		//recursive function
 		if(left<=right) {
 			
 			
@@ -42,6 +43,19 @@ public class Array {
 				return binarySearch(arr,target,m+1,right);
 			}else {
 				return binarySearch(arr,target,left,m-1);
+			}
+		}
+		
+		//while loop
+		while (left <=right) {
+			int midIndex = (left + right) / 2;
+			if (arr[midIndex] == target) {
+				return midIndex;
+			}
+			if (target < arr[midIndex]) {
+				right=midIndex - 1;
+			} else {
+				left=midIndex + 1;
 			}
 		}
 

@@ -28,13 +28,30 @@ class Circle implements Shape{
 
 
 
+class Engine{
+	public void start() {
+		System.out.println("Starting");
+	}
+}
 
+class Car{
+	private Engine engine;
+	
+	Car(){
+		this.engine=new Engine();
+	}
+	
+	public void drive() {
+		engine.start();
+		System.out.println("Driving");
+	}
+}
 
 public class InterfaceExample {
 
 	public static void main(String args[]) {
-//		Circle cir=new Circle();
-//		cir.radius;
+		Car car=new Car();
+		car.drive();;
 	}
 	
 }

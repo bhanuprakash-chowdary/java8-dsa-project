@@ -1,7 +1,13 @@
 package com.java.functonal;
 
 import java.rmi.server.Operation;
+
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FunctionalLambdaMain {
 
@@ -49,6 +55,15 @@ public class FunctionalLambdaMain {
 		
 		
 		
+		Function<Integer,String> intToStringLambda= (i) -> String.valueOf(i);
+		
+		intToStringLambda.apply(4);
+		
+		
+		Function<Integer,String> intToString = String::valueOf;
+		
+		
+		System.out.println(intToString.apply(4)); 
 		
 		
 		
@@ -74,28 +89,44 @@ public class FunctionalLambdaMain {
 //		
 //		lambda1.sum(4,10);
 //		lambda1.method(0);
-//
-//		ArrayList<Integer> arr=new ArrayList<Integer>();
-//		arr.add(0);
-//		arr.add(1);
-//		arr.add(2);
-//		arr.add(3);
-//		arr.add(4);
-//		arr.add(5);
-//		arr.add(6);
-//		arr.add(7);
-//		arr.add(8);
-//		arr.add(9);
-//		arr.add(10);
-//		
-//		
-//		
-//		arr.forEach(n->System.out.print(n+" "));
-//		System.out.println();
-//		arr.forEach(n->{if(n%2==0)System.out.print(n+" ");});
+
+		ArrayList<Integer> arr=new ArrayList<Integer>();
+		arr.add(0);
+		arr.add(1);
+		arr.add(2);
+		arr.add(3);
+		arr.add(4);
+		arr.add(5);
+		arr.add(6);
+		arr.add(7);
+		arr.add(8);
+		arr.add(9);
+		arr.add(10);
 		
 		
+		
+		List<Integer> streams=arr.stream().filter(i->i%2==0).collect(Collectors.toList());
+//				forEach(System.out::println);
+		
+		
+		arr.forEach(n->System.out.print(n+" "));
+		System.out.println();
+		arr.forEach(n->{if(n%2==0)System.out.print(n+" ");});
+		
+		
+		
+		Function<String,Person> value=Person::new;
+		
+		Person pers=value.apply("Bhanu");
 		
 		
  	}
+}
+
+class Person {
+    String name;
+
+    Person(String name) {
+        this.name = name;
+    }
 }
