@@ -172,9 +172,53 @@ class LinkedList{
 		}
 		
 		return newList;
-	
-		
 	}
+	
+	public static Node1 addTwoNumbers(LinkedList node1, LinkedList node2) {
+
+		Node1 l1 = node1.head;
+		Node1 l2 = node2.head;
+
+		Node1 dummyHead = new Node1(0);
+		Node1 current = dummyHead;
+
+		int carry = 0;
+		while (l1 != null || l2 != null || carry != 0) {
+
+			int sum = carry;
+
+			if (l1 != null) {
+				sum += l1.data;
+				l1 = l1.next;
+			}
+
+			if (l2 != null) {
+				sum += l2.data;
+				l2 = l2.next;
+			}
+
+			carry = sum / 10;
+			current.next = new Node1(sum % 10);
+			current = current.next;
+		}
+		return dummyHead.next;
+	}
+
+	public Node1 reverse() {
+
+		Node1 prev=null;
+		while(head!=null) {
+			
+			Node1 next=head.next;
+			head.next=prev;
+			prev=head;
+			head=next;
+			
+		}
+		
+		return prev;
+	}
+	
 }
 
 
@@ -212,6 +256,34 @@ public class LinkedLists {
         LinkedList mergedSort =LinkedList.merge(first, second);
         
         mergedSort.printList();
+        
+        LinkedList l1 = new LinkedList();
+        LinkedList l2 = new LinkedList();
+        
+        l1.insert(3);
+        l1.insert(4);
+        l1.insert(2);
+        
+        l2.insert(4);
+        l2.insert(6);
+        l2.insert(5);
+        
+        Node1 sum =LinkedList.addTwoNumbers(l1, l2);
+        while(sum!=null) {
+        	 System.out.print(sum.data+" -> ");
+        	sum=sum.next;
+        }
+       
+        
+        
+       Node1 reversed=list.reverse();
+       while(reversed!=null) {
+      	 System.out.print(reversed.data+" -> ");
+      	reversed=reversed.next;
+      }
+        
+        
+        
         
     }
 }

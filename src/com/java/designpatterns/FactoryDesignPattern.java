@@ -24,6 +24,8 @@ public class FactoryDesignPattern {//Also called as Virtual Constructor
 		
 	}
 }
+
+//Factory Pattern
 abstract class CellularPlan {
 
 	protected double rate;

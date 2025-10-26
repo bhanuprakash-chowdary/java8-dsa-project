@@ -10,6 +10,12 @@ class Node{
 	Node(int data){
 		this.data=data;
 	}
+	
+	@Override
+	public int hashCode() {
+		return data*31+1;
+	}
+	
 }
 
 /*				8 	
@@ -35,7 +41,7 @@ class BinaryTree {
 
 		if (root == null) {
 			return root = new Node(data);
-		} else if (data < root.data) {
+		} else if (data <= root.data) {
 
 			return root.left = insertRec(root.left, data);
 		} else if (data > root.data) {

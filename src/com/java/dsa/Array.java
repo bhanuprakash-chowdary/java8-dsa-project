@@ -6,7 +6,7 @@ public class Array {
 
 		int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
-		int target = 1;
+		int target = 7;
 
 //		int index1 = linearSearch(arr, target);
 		int index = binarySearch(arr, target,0,arr.length-1);

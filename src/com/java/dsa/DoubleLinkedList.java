@@ -77,4 +77,18 @@ class DoubleLinkedImpl {
 			this.data = data;
 		}
 	}
+	
+	
+	public void insert1(int data) {
+		
+		Node2 node=new Node2(data);
+		
+		node.next=head;
+		head.prev=node;
+		
+		head=node;
+	}
+	
+	
+	
 }

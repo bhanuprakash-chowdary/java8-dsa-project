@@ -1,7 +1,7 @@
 package com.java.designpatterns;
 
 //Defining a class that has only one instance and provides a global point to access it. 
-//Ensuring only single instance is created and that object can be used by all other classes
+//This is particularly useful when exactly one object is needed to coordinate actions across the system.
 public class SingletonPattern {
 
 	private SingletonPattern instance;
@@ -10,7 +10,7 @@ public class SingletonPattern {
 		
 	}
 	
-	public SingletonPattern getInstance() {
+	public SingletonPattern getInstance() {//global point of access
 		if(instance==null) {
 			new SingletonPattern();
 		}

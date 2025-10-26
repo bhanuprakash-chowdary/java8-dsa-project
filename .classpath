@@ -4,8 +4,8 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="/Users/credr/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar" sourcepath="/Users/credr/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1-sources.jar">
 		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="test" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="maven.groupId" value="com.vaadin.external.google"/>
 			<attribute name="maven.artifactId" value="android-json"/>
 			<attribute name="maven.version" value="0.0.20131108.vaadin1"/>
@@ -21,5 +21,9 @@
 			<attribute name="maven.scope" value="compile"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/Users/credr/Downloads/javase-3.5.1.jar"/>
+	<classpathentry kind="lib" path="/Users/credr/Downloads/core-3.5.1.jar"/>
+	<classpathentry kind="lib" path="/Users/credr/Downloads/javase-3.5.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/credr/Downloads/mail-1.4.7.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

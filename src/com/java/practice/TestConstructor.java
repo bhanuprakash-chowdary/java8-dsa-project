@@ -4,6 +4,14 @@ class ClassA {
 
 	protected String name;
 	
+	public void init() {
+		name="Bhanu";
+	}
+	
+	{
+		System.out.println(name);
+	}
+	
 	public ClassA(String name) {
 		this.name=name;
 		System.out.println("Class A Constructor: "+name);

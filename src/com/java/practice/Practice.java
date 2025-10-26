@@ -16,6 +16,8 @@ public class Practice {
 		Map<Character, Integer> values = new HashMap<Character, Integer>();
 		Map<Character, Boolean> visited = new HashMap<Character, Boolean>();
 
+		
+		
 		for (int i = 0; i < str.length(); i++) {
 			char currentChar = str.charAt(i);
 
@@ -37,6 +39,8 @@ public class Practice {
 		System.out.println("Repeated Characters :"+values);
 		System.out.println();
 		int arr[] = { 1, 2, 3, 7, 20, 25, 100, 25, 234, 65, 7000, 32, 44, 33 };
+		
+		
 		System.out.print("Actual Array : ");
 		for(int ar:arr) {
 			System.out.print(ar+" ");
@@ -179,7 +183,7 @@ public class Practice {
 		int [] nums= {1, 2, 3, 1, 2, 4, 5};
 		
 		Set<Integer> set= new HashSet<>();
-		Map<Integer,Integer> values1=new HashMap();;
+		Map<Integer,Integer> values1=new HashMap();
 		
 		for(int i=0;i<nums.length;i++) {
 			

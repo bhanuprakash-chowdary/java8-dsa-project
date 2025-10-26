@@ -3,16 +3,17 @@ package com.java.dsa;
 class A{
 	int a;
 	int b;
+	
 }
 
-class B{
-	A ref;
+class B extends A{
+	
 	public void m1(int x){
-		ref.a=x;
+		super.a=x;
 	}
 	
 	public int m2() {
-		return ref.a;
+		return super.a;
 	}
 }
 public class Dummy {

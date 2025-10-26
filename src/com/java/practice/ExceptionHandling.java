@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 /**program is a set of instructions;
- * Exception is a event that occurs during execution of program which interepts the normal of instructions
+ * Exception is a event that occurs during execution of program which interepts the normal flow of instructions
  * if Exception occurs ,it creates Exception Object and contains information: 
  * 
  * 		1.Type of Exception and message
@@ -71,22 +71,22 @@ public class ExceptionHandling {
 		ExceptionHandling obj=new ExceptionHandling();
 		
 //		//-------Runtime Exception---------//
-		obj.classCastException();   //No issue with not handling throw.
-//Exception in thread "main" java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.String
-//		at com.java.practice.ExceptionHandling.classCastException(ExceptionHandling.java:114)
-//		at com.java.practice.ExceptionHandling.main(ExceptionHandling.java:72)
-
-		obj.indexOutOfBoundException();
-		obj.nullPointExeption();
-		obj.arithmaticException();
-		obj.illegalArgumentException();
+//		obj.classCastException();   //No issue with not handling throw.
+////Exception in thread "main" java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.String
+////		at com.java.practice.ExceptionHandling.classCastException(ExceptionHandling.java:114)
+////		at com.java.practice.ExceptionHandling.main(ExceptionHandling.java:72)
+//
+//		obj.indexOutOfBoundException();
+//		obj.nullPointExeption();
+//		obj.arithmaticException();
+//		obj.illegalArgumentException();
 		
 		
 		
 		//-------CompileTime Exception-----//
 		
 		
-		
+		System.out.println(100000);
 		obj.classNotFoundException(); //issue with Compiler for not handling . 
 
 //Exception in thread "main" java.lang.Error: Unresolved compilation problem: 

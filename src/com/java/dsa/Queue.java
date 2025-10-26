@@ -61,12 +61,12 @@ public class Queue {
 		if (isEmpty()) {
 			System.out.println("Empty Queue");
 		} else {
-			System.out.println("\nFront index-> " + front);
-			System.out.println("Items -> ");
+			System.out.println("Front index-> " + front);
+			System.out.print("Items -> ");
 			for (i = front; i <= rear; i++)
 				System.out.print(items[i] + "  ");
 
-			System.out.println("\nRear index-> " + rear);
+			System.out.println("Rear index-> " + rear);
 		}
 	}
 
@@ -93,6 +93,11 @@ public class Queue {
 
 		// Now we have just 4 elements
 		q.display();
+		
+		q.enQueue(6);
+		
+		q.display();
+		
 
 	}
 }
